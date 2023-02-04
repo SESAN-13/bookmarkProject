@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen(lg){
+
+    .bg-hero{
+        width:2000px;
+        height:300px;
+        left:30%;
+        @apply absolute top-52 bg-softBlue rounded-l-full
+    }
+
+
+    .bg-tabs{
+        width:2000px;
+        height:300px;
+        right:60%;
+        @apply absolute top-72 bg-softBlue rounded-r-full
+    }
+}
+
+
+.btnn-mobile-nav{
+    cursor:pointer;
+    z-index: 30;
+
+}
+#menu{
+    z-index: 1
+}
+
+.nav-open .icon-nav[name="close-outline"]{
+    display:block;
+}
+
+.nav-open .icon-nav[name="menu-outline"]{
+    display:none;
+    
+}
+
+.icon-nav{
+    width:2rem;
+    height:2rem;
+    
+}
+.icon-nav[name="close-outline"]{
+    display:none;
+    color:white;
+
+}
+
+.active .content{
+display:block    
+}
+
+.active .btn-arrow{
+    transform:rotate(-180deg);
+    transition: all 0.3s;
+}
