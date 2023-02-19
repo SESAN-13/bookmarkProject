@@ -28,8 +28,9 @@ const logo = document.getElementById('logo')
 btnMobile.addEventListener('click', function (e) {
     btnMobile.classList.toggle('nav-open')
     menu.classList.toggle('hidden')
+    menu.classList.toggle('flex')
     
-    if (!menu.classList.contains('hidden')) {
+    if (menu.classList.contains('flex')) {
         logo.setAttribute('src','../images/logo-bookmark-footer.svg')
     } else {
         logo.setAttribute('src','../images/logo-bookmark.svg')
@@ -59,7 +60,6 @@ tabs.forEach(tab => {
 // for accordion
 
 const faqs = document.querySelectorAll('.faq ')
-console.log(faqs)
 faqs.forEach(faq => {
     return faq.addEventListener('click', function (e) {
         // faqs.forEach(faqq=>faqq.classList.remove('active'))
